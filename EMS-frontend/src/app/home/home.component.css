@@ -1,0 +1,113 @@
+/* Ensure the component takes up the full viewport */
+.home-container {
+  position: relative; /* For the animated shapes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  overflow: hidden; /* Prevent shapes from showing outside */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Vibrant gradient background */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Animated shapes */
+.home-container::before,
+.home-container::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  border-radius: 50%; /* Make the shapes circular */
+  animation: moveShapes 8s ease-in-out infinite; /* Smooth infinite animation */
+}
+
+.home-container::before {
+  top: -120px;
+  left: -150px;
+  background: rgba(252, 214, 112, 0.5); /* Golden yellow for one shape */
+}
+
+.home-container::after {
+  bottom: -120px;
+  right: -150px;
+  background: rgba(120, 220, 252, 0.5); /* Light blue for the other shape */
+  animation-delay: 4s; /* Offset the animation timing */
+}
+
+@keyframes moveShapes {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(80px, 80px) scale(1.3);
+  }
+}
+
+/* Style the card to center it and limit its width */
+.home-card {
+  position: relative; /* Ensure the card stays above shapes */
+  z-index: 1; /* Place card above animated background */
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+  background: white; /* Card background */
+  border-radius: 15px; /* Rounded corners for the card */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+  border: 2px solid #ff9a9e; /* Border matching the gradient */
+}
+
+/* Add some spacing between the buttons */
+.home-buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 15px; /* Add space between buttons */
+  margin-top: 20px;
+}
+
+/* Title styling */
+mat-card-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ff6f61; /* Vibrant coral red */
+  margin-bottom: 10px;
+}
+
+/* Subtitle styling */
+mat-card-content p {
+  font-size: 16px;
+  color: #666; /* Neutral gray for description */
+}
+
+/* Button styling */
+button {
+  width: 100%; /* Full width of the parent container */
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.3s ease; /* Add smooth hover effect */
+}
+
+button:hover {
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Icon styling */
+mat-icon {
+  margin-right: 8px;
+}
+.footer {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}

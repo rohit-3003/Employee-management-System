@@ -1,0 +1,52 @@
+<div class="employee-list">
+  <!-- Home Button -->
+  <button mat-raised-button color="primary" [routerLink]="'/home'" class="home-button">
+    <mat-icon>home</mat-icon> Home
+  </button>
+
+  <!-- Table Container -->
+  <div class="table-container">
+    <mat-table [dataSource]="employees" matSort class="mat-elevation-z8">
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+        <mat-cell *matCellDef="let employee"> {{employee.id}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+        <mat-cell *matCellDef="let employee"> {{employee.name}} </mat-cell>
+      </ng-container>
+
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+        <mat-cell *matCellDef="let employee"> {{employee.email}} </mat-cell>
+      </ng-container>
+
+      <!-- Department Column -->
+      <ng-container matColumnDef="department">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Department </mat-header-cell>
+        <mat-cell *matCellDef="let employee"> {{employee.department}} </mat-cell>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let employee">
+          <button mat-raised-button color="warn" (click)="deleteEmployee(employee.id)">
+            <mat-icon>delete</mat-icon> Delete
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <!-- Header and Row Definitions -->
+      <mat-header-row *matHeaderRowDef="['id', 'name', 'email', 'department', 'actions']"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: ['id', 'name', 'email', 'department', 'actions'];"></mat-row>
+    </mat-table>
+  </div>
+
+  <!-- Pagination -->
+  <mat-paginator [pageSizeOptions]="[5, 10, 25]" showFirstLastButtons></mat-paginator>
+</div>

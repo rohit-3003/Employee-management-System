@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <span class="toolbar-title">Employee Management System</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" class="sidenav" opened="true">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" routerLinkActive="active-link">
+        <mat-icon>home</mat-icon> Home
+      </a>
+      <a mat-list-item routerLink="/employees" routerLinkActive="active-link">
+        <mat-icon>person_search</mat-icon> View Employees
+      </a>
+      <a mat-list-item routerLink="/add-employee" routerLinkActive="active-link">
+        <mat-icon>add_circle</mat-icon> Add Employee
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div [ngClass]="currentRouteClass">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- <div class="content">
+      <router-outlet></router-outlet>
+    </div> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

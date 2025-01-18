@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+
+/* Toolbar styling */
+.toolbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Sidenav and content layout */
+  .sidenav-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Sidenav styling */
+  .sidenav {
+    width: 250px;
+    background-color: #2f3b52;
+    color: white;
+    padding-top: 20px;
+  }
+  
+  mat-nav-list a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  mat-nav-list a:hover {
+    background-color: #3e4c70;
+  }
+  
+  mat-nav-list mat-icon {
+    margin-right: 10px;
+  }
+  
+  /* Active Link Styling */
+  .active-link {
+    background-color: #3e4c70;
+    color: white;
+  }
+  
+  /* Content section */
+  .content {
+    padding: 20px;
+    background-color: #f4f7fb;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  /* Responsive Design: When screen size is small, switch to 'over' mode for sidenav */
+  @media (max-width: 768px) {
+    .sidenav {
+      width: 200px;
+    }
+  
+    .sidenav-container {
+      flex-direction: column;
+    }
+  
+    .mat-toolbar-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  /* Default background */
+.default-background {
+  background: #f0f0f0; /* Light gray */
+  min-height: 100vh;
+}
+
+/* Home page background */
+.home-background {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Employees page background */
+.employees-background {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Add employee page background */
+.add-employee-background {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  min-height: 100vh;
+  color: #121212;
+}

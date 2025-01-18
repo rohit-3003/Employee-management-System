@@ -1,0 +1,23 @@
+<!-- home.component.html -->
+<div class="home-container">
+  <mat-card class="home-card">
+    <mat-card-title>Welcome to the Employee Management System</mat-card-title>
+    <mat-card-content>
+      <p>Select an option to manage employees:</p>
+
+      <div class="home-buttons">
+        <button mat-raised-button color="primary" [routerLink]="'/employees'">
+          <mat-icon>person_search</mat-icon> View Employees
+        </button>
+
+        <button mat-raised-button color="accent" [routerLink]="'/add-employee'">
+          <mat-icon>add_circle</mat-icon> Add Employee
+        </button>
+
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <footer class="footer">
+    <p>© 2025 Employee Management System. All rights reserved.</p>
+  </footer>
+</div>

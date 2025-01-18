@@ -1,0 +1,126 @@
+/* Employee List Container */
+.employee-list {
+  position: relative;
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #e3f2fd, #e1bee7);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Home Button Styling */
+.home-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(45deg, #42a5f5, #7e57c2);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.home-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Container Styling */
+.table-container {
+  overflow-x: auto;
+  border-radius: 10px;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header Styling */
+mat-header-cell {
+  background-color: #3949ab;
+  color: #020202;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+}
+
+/* Table Cell Styling */
+mat-cell {
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  color: #555555;
+}
+
+mat-row:hover {
+  background-color: rgba(57, 73, 171, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .employee-list {
+    padding: 15px;
+  }
+
+  mat-header-cell, mat-cell {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .home-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+/* Delete Button Styling */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #e53935;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #d32f2f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Footer for Pagination */
+mat-paginator {
+  background: #eeeeee;
+  padding: 10px;
+  border-top: 1px solid #cccccc;
+}
+
+mat-paginator .mat-paginator-navigation {
+  color: #3949ab;
+}
+
+mat-paginator .mat-paginator-page-size-label,
+mat-paginator .mat-paginator-range-label {
+  color: #555555;
+}
+
+/* Icons Styling */
+mat-icon {
+  vertical-align: middle;
+  font-size: 20px;
+  margin-right: 5px;
+}

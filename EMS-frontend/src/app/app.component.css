@@ -1,0 +1,45 @@
+.container {
+    padding: 16px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .item {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  
+  .sidenav-container {
+    height: 100vh;
+  }
+  
+  mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  mat-nav-list {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  mat-nav-list a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .active-link {
+    font-weight: bold;
+    color: #1976d2; /* Angular Material primary color */
+  }
+  
+  .content {
+    margin-top: 16px;
+  }
+ 
